@@ -15,9 +15,9 @@ Based on QT WebEngine
 	cd sb
 	git submodule update --init --recursive		# 3GB+ download
 	# make update
+	# sudo make depends
 	make
 	sudo make install
-
 
 
 ## Rationale

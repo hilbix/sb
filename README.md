@@ -19,6 +19,12 @@ Based on QT WebEngine
 	make
 	sudo make install
 
+Notes:
+
+- If you have less than `2GB + 2GB x #CPUtrheads` of usable free RAM,
+  then use something like `NINJAJOBS=-j2 make` (this is for 6GB free)
+  else excessive swapping (or OOM) might occur.
+
 
 ## Rationale
 

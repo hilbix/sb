@@ -5,7 +5,7 @@ love:	all
 
 .PHONY:	all
 all:	qtwebengine/Makefile
-	for a in . . . . . . . . . .; do echo "Warning!  This needs 10GB+ RAM times your number of CPUs.  NINJAJOBS=1 crashes ninja.  You have been warned!"; sleep .1; done
+	for a in . . . . . . . . . .; do echo "Use 'NINJAJOBS=-j1 make' if your machine has less than 2GB+2GB*#CPUthreads RAM"; sleep .1; done
 	nice -99 ionice -c3 make -C qtwebengine || { echo 'Missing some build-depends? Try: "make depends"'; exit 1; }
 
 .PHONY:	update

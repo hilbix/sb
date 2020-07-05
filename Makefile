@@ -5,7 +5,8 @@ love:	all
 
 .PHONY:	all
 all:	qtwebengine/Makefile
-	make -C qtwebengine || { echo 'Missing some build-depends? Try: "make depends"'; exit 1; }
+	for a in . . . . . . . . . .; do echo "Warning!  This needs 10GB+ RAM times your number of CPUs.  NINJAJOBS=1 crashes ninja.  You have been warned!"; sleep .1; done
+	nice -99 ionice -c3 make -C qtwebengine || { echo 'Missing some build-depends? Try: "make depends"'; exit 1; }
 
 .PHONY:	update
 update:
@@ -33,9 +34,10 @@ qtwebengine:
 	git submodule update --init --recursive
 
 .PHONY:	depends
-prereq:	debian-depends
+depends:	debian-depends
 
 .PHONY:	debian-depends
 debian-depends:
 	apt install qtdeclarative5-dev qtdeclarative5-private-dev
+	apt install libx11-xcb-dev
 

@@ -38,6 +38,6 @@ depends:	debian-depends
 
 .PHONY:	debian-depends
 debian-depends:
-	apt install qtdeclarative5-dev qtdeclarative5-private-dev
+	apt install qtbase5-private-dev qtdeclarative5-dev qtdeclarative5-private-dev
 	apt install libx11-xcb-dev
 

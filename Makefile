@@ -26,10 +26,10 @@ gitclean:	clean
 fullyclean:	clean
 	git submodule foreach --recursive git clean -f -d -x
 
-qtwebengine/Makefile:	qtwebengine
+qtwebengine/Makefile:	qtwebengine/.git
 	cd qtwebengine && qmake
 
-qtwebengine:
+qtwebengine/.git:
 	echo Please wait, downloading 3GB+ ..
 	git submodule update --init --recursive
 

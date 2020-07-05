@@ -8,12 +8,16 @@ A browser that hands back control to you in a fashion which keeps you safe
 
 Based on QT WebEngine
 
+
 ## Usage
 
-	git clone --recursive https://github.com/hilbix/sb
+	git clone https://github.com/hilbix/sb.git
 	cd sb
+	git submodule update --init --recursive		# 3GB+ download
+	# make update
 	make
 	sudo make install
+
 
 
 ## Rationale
@@ -88,6 +92,11 @@ Is it secure?
 
 - Probably no.  It's as secure as QT WebEngine
 
+Security updates?
+
+- This heavily depends on upstream
+- `make update && make all && sudo make install`
+
 WTW why?
 
 - Because I can
@@ -98,6 +107,7 @@ Binaries?
 - If you want to contribute, see below
 
 QT and QT WebEngine?
+
 - QT and QT WebEngine are highly portable
 - However the hooks of SB might be a problem.
 - Also QT WebView is too limited, so no iOS and no Android, sorry

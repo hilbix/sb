@@ -1,0 +1,3 @@
+[submodule "qtwebengine"]
+	path = qtwebengine
+	url = https://github.com/qt/qtwebengine.git

@@ -11,7 +11,7 @@ BRANCH="$2"
 
 [ . = "$RUNDIR" ] || o cd "$RUNDIR"
 
-st="$(o git status --porcelain)" && [ -z "$st" ] || OOPS worktree not clean
+st="$(o git status --porcelain)" && [ -z "$st" ] || OOPS worktree not clean: "$st"
 
 [ -n "$BRANCH" ] || BRANCH="$(o git rev-parse --abbrev-ref HEAD)" || OOPS cannot get current branch name
 
